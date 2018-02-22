@@ -1,9 +1,12 @@
+from __future__ import absolute_import
+from __future__ import print_function
+from __future__ import unicode_literals
 import os
 import yaml
 
 from github import Github
 
-data = yaml.load(open('data.yaml', 'r').read())
+data = yaml.load(open('data.yml', 'r').read())
 
 GITHUB_TOKEN=os.environ['GITHUB_TOKEN']
 gh = Github(GITHUB_TOKEN)
