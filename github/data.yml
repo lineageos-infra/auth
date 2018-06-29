@@ -8,6 +8,7 @@ Developer Relations:
   members:
     - ciwrl
     - fourkbomb
+    - haggertk
     - luca020400
     - luk1337
     - mikeNG
@@ -19,8 +20,8 @@ Head Developers:
   meta:
     id: 2589670
   members:
-    - ciwrl
     - fourkbomb
+    - haggertk
     - luca020400
     - luk1337
     - mikeNG
@@ -34,24 +35,26 @@ Maintainers:
   members:
     - ciwrl
     - fourkbomb
+    - haggertk
+    - harryyoud
+    - javelinanddart
+    - jrizzoli
     - luca020400
     - luk1337
     - mikeNG
+    - npjohnson
     - Rashed97
     - razorloves
     - sam3000
     - zifnab06
-    - javelinanddart
-    - harryyoud
-    - jrizzoli
-    - npjohnson
 Public Relations:
   meta:
     id: 2713795
   members:
     - ciwrl
-    - zifnab
+    - haggertk
     - harryyoud
     - javelinanddart
     - jrizzoli
     - npjohnson
+    - zifnab06
