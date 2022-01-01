@@ -1,4 +1,4 @@
-name: Gerrit Group permissions
+name: Github Membership
 on:
   schedule:
     - cron: "0 * * * *"
