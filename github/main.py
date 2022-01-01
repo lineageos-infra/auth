@@ -6,7 +6,7 @@ from github import Github
 with open("data.yml", "r") as f:
     data = yaml.safe_load(f.read())
 
-GITHUB_TOKEN=os.environ['GITHUB_TOKEN']
+GITHUB_TOKEN=os.environ['X_GITHUB_TOKEN']
 gh = Github(GITHUB_TOKEN)
 org = gh.get_organization('LineageOS')
 members = set(x.login.lower() for x in org.get_members())
