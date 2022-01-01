@@ -21,4 +21,4 @@ jobs:
           X_GITHUB_TOKEN: ${{ secrets.X_GITHUB_TOKEN }}
         run: |
           pip install -r github/requirements.txt
-          python github/main.py
+          cd github; python main.py
