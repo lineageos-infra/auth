@@ -33,8 +33,9 @@ for name, team in data.items():
     delete = current_members.difference(desired_members)
 
     for member in add:
-        print("Adding {} to {}".format(member, name))
-        team.add_to_members(gh.get_user(member))
+        if member in members:
+            print("Adding {} to {}".format(member, name))
+            team.add_to_members(gh.get_user(member))
     for member in delete:
         print("Removing {} from {}".format(member, name))
         team.remove_from_members(gh.get_user(member))
