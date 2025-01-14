@@ -33,6 +33,7 @@ Maintainers:
   meta:
     id: 2589667
   members:
+    - '488315'
     - Abhinavgupta371
     - AdarshGrewal
     - AdrianDC
@@ -176,7 +177,6 @@ Maintainers:
     - juleast
     - kagurarinko
     - kawaaii
-    - kjones
     - lifehackerhansol
     - lineageos-gerrit
     - log1cs
