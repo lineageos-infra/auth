@@ -33,6 +33,8 @@ Maintainers:
   meta:
     id: 2589667
   members:
+    # name to id -> https://api.github.com/users/{name}
+    # id to name -> https://api.github.com/user/{id}
     - '488315' # id=19639817
     - aarani # id=9452646
     - Abhinavgupta371 # id=19843278
