@@ -35,8 +35,8 @@ def sync():
     members = set(x.login.lower() for x in org.get_members())
     team_members = {
         login.lower(): [
-            data[team]["meta"]["id"]
-            for team, info in data.items()
+            info["meta"]["id"]
+            for info in data.values()
             if login in info["members"]
         ]
         for login in {
