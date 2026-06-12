@@ -1,7 +1,7 @@
 import os
 import sys
 
-from github import Github
+from github import Auth, Github
 from ruamel.yaml import YAML
 
 yaml = YAML()
@@ -30,7 +30,7 @@ def lint():
         yaml.dump(data, f)
 
 def sync():
-    gh = Github(os.environ['X_GITHUB_TOKEN'])
+    gh = Github(auth=Auth.Token(os.environ['X_GITHUB_TOKEN']))
     org = gh.get_organization('LineageOS')
     members = set(x.login.lower() for x in org.get_members())
     team_members = {
