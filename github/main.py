@@ -33,12 +33,24 @@ def sync():
     gh = Github(os.environ['X_GITHUB_TOKEN'])
     org = gh.get_organization('LineageOS')
     members = set(x.login.lower() for x in org.get_members())
-    everyone = set([x.lower() for y in [y["members"] for y in data.values()] for x in y])
+    team_members = {
+        login.lower(): [
+            data[team]["meta"]["id"]
+            for team, info in data.items()
+            if login in info["members"]
+        ]
+        for login in {
+            member
+            for info in data.values()
+            for member in info["members"]
+        }
+    }
+    everyone = set(team_members.keys())
 
     # see if there's anyone to add
     for member in everyone - members:
         print("Inviting {} to org".format(member))
-        org.add_to_members(gh.get_user(member))
+        org.invite_user(gh.get_user(member), teams=[org.get_team(x) for x in team_members[member]])
 
     # see if there's anyone to remove
     # NOTE: This is a manual process, DO NOT MAKE THIS AUTOMATIC
